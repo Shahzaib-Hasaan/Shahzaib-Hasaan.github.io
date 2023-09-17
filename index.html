@@ -3,36 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Your Machine Learning Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <nav>
-            <ul>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <div class="container">
+                <h1>Your Name</h1>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
-    <main>
-        <section id="about">
+
+    <section id="about">
+        <div class="container">
             <h2>About Me</h2>
-            <p>Welcome to my portfolio! My name is [Your Name], and I am a [Your Profession].</p>
-        </section>
-        <section id="projects">
+            <p>Welcome to my machine learning portfolio! I am a passionate ML developer with a strong background in...</p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
             <h2>Projects</h2>
-            <ul>
-                <li><a href="#project1">Project 1</a></li>
-                <li><a href="#project2">Project 2</a></li>
-                <li><a href="#project3">Project 3</a></li>
-            </ul>
-        </section>
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>You can reach me at [Your Email Address] or [Your Phone Number].</p>
-        </section>
-    </main>
+            <!-- Your project cards or descriptions go here -->
+            <div class="project">
+                <h3>Project Title 1</h3>
+                <p>Description of your ML project. Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                <a href="link-to-project-repo">View Code</a>
+            </div>
+            <div class="project">
+                <h3>Project Title 2</h3>
+                <p>Description of your ML project. Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                <a href="link-to-project-repo">View Code</a>
+            </div>
+            <!-- Add more projects as needed -->
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>Feel free to get in touch with me. You can reach me at your.email@example.com</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Your Name - Machine Learning Portfolio</p>
+        </div>
+    </footer>
+
 </body>
 </html>
