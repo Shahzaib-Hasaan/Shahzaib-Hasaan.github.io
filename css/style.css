@@ -68,6 +68,28 @@ ul.social-icons li a:hover {
 	opacity:1;
 }
 /***** Skills *****/
+#skills .row{
+	margin:0;
+}
+.skill-card h3 {
+	font-size: 18.5px;
+	line-height: 15px;
+	font-weight: normal;
+	text-transform:uppercase;
+	color: #30a5dc;
+	
+}
+
+.skill-card p{
+	font-size: 15.5px;
+	line-height: 15px;
+	font-weight:normal;
+	color: #EAEDF2;
+	padding-bottom: 20px;
+}
+/* .skill-card h3 span {
+	float:right;
+} */
 .skills .span3 {
 	width:235px;
 	overflow: hidden;
