@@ -87,7 +87,25 @@ ul.social-icons li a:hover {
 	color: #EAEDF2;
 	padding-bottom: 20px;
 }
-
+/* Blog post  */
+.blog-post-list {
+	list-style: none; /* Remove default list styles */
+	padding: 0;
+  }
+  
+  .blog-post-list li {
+	margin-bottom: 10px;
+  }
+  
+  .blog-post-list a {
+	text-decoration: none;
+	color:turquoise;
+  }
+  
+  .blog-post-list a:hover {
+	text-decoration: underline;
+  }
+  
 .profile .span3 .btn{
 	color: #EAEDF2;
 	font-size: 20.5px;
