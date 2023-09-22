@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <title>Profile - Machine Learning Portfolio</title>
+    <link rel="stylesheet" href="css/projects.css">
+    <title>Projects - Machine Learning Portfolio</title>
 </head>
 
 <body>
@@ -20,18 +20,84 @@
                 <span class="bar"></span>
             </div>
             <ul class="navbar-menu">
-                <li><a href="index.html" class="active">Profile</a></li>
-                <li><a href="projects.html">Projects</a></li>
+                <li><a href="index.html">Profile</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
                 <li><a href="learnings.html">Learnings</a></li>
                 <li><a href="blog.html">Blog</a></li>
             </ul>
         </nav>
     </header>
 
+    <section class="project-section">
+        <div class="project-accordion">
+            <!-- First Project -->
+            <div class="accordion-item">
+                <h3 class="accordion-title">Project Title 1</h3>
+                <div class="accordion-content">
+                    <!-- <div class="project-image">
+                        <img src="images/profilepic.png" alt="Project 1">
+                    </div> -->
+                    <h4>Description:</h4>
+                    <p>This is a brief description of Project 1.</p>
 
+                    <h4>Technologies Used:</h4>
+                    <ul>
+                        <li>Python</li>
+                        <li>OpenAI API</li>
+                        <!-- Add more technologies as needed -->
+                    </ul>
 
+                    <h4>Project Link:</h4>
+                    <p><a href="project1.html" target="_blank">View Project</a></p>
+                </div>
+            </div>
+            
+            <!-- Second Project -->
 
+            <div class="accordion-item">
+                <h3 class="accordion-title">Project Title 1</h3>
+                <div class="accordion-content">
+                    <!-- <div class="project-image">
+                        <img src="images/profilepic.png" alt="Project 1">
+                    </div> -->
+                    <h4>Description:</h4>
+                    <p>This is a brief description of Project 1.</p>
 
+                    <h4>Technologies Used:</h4>
+                    <ul>
+                        <li>Python</li>
+                        <li>OpenAI API</li>
+                        <!-- Add more technologies as needed -->
+                    </ul>
+
+                    <h4>Project Link:</h4>
+                    <p><a href="project1.html" target="_blank">View Project</a></p>
+                </div>
+            </div>
+
+            <!-- Third Project -->
+            <div class="accordion-item">
+                <h3 class="accordion-title">Project Title 1</h3>
+                <div class="accordion-content">
+                    <!-- <div class="project-image">
+                        <img src="images/profilepic.png" alt="Project 1">
+                    </div> -->
+                    <h4>Description:</h4>
+                    <p>This is a brief description of Project 1.</p>
+
+                    <h4>Technologies Used:</h4>
+                    <ul>
+                        <li>Python</li>
+                        <li>OpenAI API</li>
+                        <!-- Add more technologies as needed -->
+                    </ul>
+
+                    <h4>Project Link:</h4>
+                    <p><a href="project1.html" target="_blank">View Project</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <p>Contact: <a href="mailto:shahxeebhassan@email.com" class="footer-email">shahxeebhassan@email.com</a></p>
@@ -43,6 +109,25 @@
 
         navbarToggle.addEventListener('click', () => {
             navbarMenu.classList.toggle('active');
+        });
+    </script>
+    <script>
+        // Get all accordion items
+        const accordionItems = document.querySelectorAll('.accordion-item');
+    
+        // Add a click event listener to each item
+        accordionItems.forEach(item => {
+            const title = item.querySelector('.accordion-title');
+            const content = item.querySelector('.accordion-content');
+    
+            title.addEventListener('click', () => {
+                // Toggle the content's display when the title is clicked
+                if (content.style.display === 'block') {
+                    content.style.display = 'none';
+                } else {
+                    content.style.display = 'block';
+                }
+            });
         });
     </script>
 </body>
