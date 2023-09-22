@@ -1,3 +1,10 @@
+/* Reset some default browser styles */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Include padding and borders in box model */
+}
+
 /* Overall Page Styling */
 body {
     font-family: Arial, sans-serif;
@@ -7,25 +14,25 @@ body {
 }
 
 .learnings {
+    max-width: 1200px;
     margin: 0 auto;
     padding: 30px;
     background-color: #fff;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    overflow: hidden; /* Ensure the container wraps its content */
 }
 
-
-/* Learning Category Styles */
-.learning-category {
+/* Section Styling */
+.categories-container {
     display: flex;
-    flex-direction: row; /* Display categories in a single column */
-    gap: 20px; /* Adjust the gap between categories */
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
 }
 
 .learning-category {
-    max-width: 800px; /* Set a maximum width for the category elements */
-    margin: 0 auto; /* Center the category elements horizontally */
+    flex: 1;
+    width: calc(50% - 20px);
     margin-bottom: 40px;
     padding: 20px;
     background-color: #fff;
@@ -35,9 +42,6 @@ body {
     transition: transform 0.3s ease-in-out;
 }
 
-
-
-
 .learning-category h2 {
     font-size: 24px;
     color: #333;
@@ -46,7 +50,6 @@ body {
     padding-bottom: 10px;
 }
 
-/* Certificate Card Styles */
 .certificate-card {
     background-color: #fff;
     padding: 20px;

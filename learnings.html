@@ -29,54 +29,50 @@
         </nav>
     </header>
     <section class="learnings">
-        <div class="learning-category">
-            <h2>Machine Learning Courses</h2>
-            <div class="certificate-card" onclick="toggleCertificateDetails(1)">
-                <h3>Machine Learning A-Z™: Hands-On Python & R In Data Science</h3>
-                <div class="certificate-details" id="certificate-details-1">
-                    <img src="certificate1.jpg" alt="Certificate">
-                    <p>Click to verify: <a href="certificate1-verification-link" target="_blank">View Certificate</a>
-                    </p>
+        <div class="categories-container">
+            <div class="learning-category">
+                <h2>Machine Learning Courses</h2>
+                <div class="certificate-card" onclick="toggleCertificateDetails(1)">
+                    <h3>Machine Learning A-Z™: Hands-On Python & R In Data Science</h3>
+                    <div class="certificate-details" id="certificate-details-1">
+                        <img src="certificate1.jpg" alt="Certificate">
+                        <p>Click to verify: <a href="certificate1-verification-link" target="_blank">View Certificate</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="certificate-card" onclick="toggleCertificateDetails(2)">
+                    <h3>Advanced Machine Learning Specialization</h3>
+                    <div class="certificate-details" id="certificate-details-2">
+                        <img src="certificate2.jpg" alt="Certificate">
+                        <p>Click to verify: <a href="certificate2-verification-link" target="_blank">View Certificate</a>
+                        </p>
+                    </div>
                 </div>
             </div>
 
-            <div class="certificate-card" onclick="toggleCertificateDetails(2)">
-                <h3>Advanced Machine Learning Specialization</h3>
-                <div class="certificate-details" id="certificate-details-2">
-                    <img src="certificate2.jpg" alt="Certificate">
-                    <p>Click to verify: <a href="certificate2-verification-link" target="_blank">View Certificate</a>
-                    </p>
+            <div class="learning-category">
+                <h2>Data Science Courses</h2>
+                <div class="certificate-card" onclick="toggleCertificateDetails(3)">
+                    <h3>Data Science Fundamentals</h3>
+                    <div class="certificate-details" id="certificate-details-3">
+                        <img src="certificate3.jpg" alt="Certificate">
+                        <p>Click to verify: <a href="certificate3-verification-link" target="_blank">View Certificate</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="certificate-card" onclick="toggleCertificateDetails(4)">
+                    <h3>Advanced Data Analysis Certification</h3>
+                    <div class="certificate-details" id="certificate-details-4">
+                        <img src="certificate4.jpg" alt="Certificate">
+                        <p>Click to verify: <a href="certificate4-verification-link" target="_blank">View Certificate</a>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-
-        <div class="learning-category">
-            <h2>Data Science Courses</h2>
-            <div class="certificate-card" onclick="toggleCertificateDetails(3)">
-                <h3>Data Science Fundamentals</h3>
-                <div class="certificate-details" id="certificate-details-3">
-                    <img src="certificate3.jpg" alt="Certificate">
-                    <p>Click to verify: <a href="certificate3-verification-link" target="_blank">View Certificate</a>
-                    </p>
-                </div>
-            </div>
-
-            <div class="certificate-card" onclick="toggleCertificateDetails(4)">
-                <h3>Advanced Data Analysis Certification</h3>
-                <div class="certificate-details" id="certificate-details-4">
-                    <img src="certificate4.jpg" alt="Certificate">
-                    <p>Click to verify: <a href="certificate4-verification-link" target="_blank">View Certificate</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-
     </section>
-
-
-
-
-
 
     <footer>
         <p>Contact: <a href="mailto:shahxeebhassan@email.com" class="footer-email">shahxeebhassan@email.com</a></p>
@@ -88,8 +84,6 @@
             const certificateDetails = document.getElementById(`certificate-details-${certificateId}`);
             certificateDetails.classList.toggle('show-details');
         }
-
-
     </script>
 </body>
 
