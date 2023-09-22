@@ -1,124 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <title>Profile</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="css/bootstrap.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
-  <link href="font/css/fontello.css" rel="stylesheet">
-  <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Profile - Machine Learning Portfolio</title>
 </head>
-
 <body>
-  <div class="navbar">
-    <div class="navbar-inner">
-      <div class="container"> <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span
-            class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
-        <ul class="nav nav-collapse pull-right">
-          <li><a href="index.html" class="active"><i class="icon-user"></i> Profile</a></li>
-          <li><a href="work.html"><i class="icon-picture"></i> Work</a></li>
-          <li><a href="learnings.html"><i class="icon-trophy"></i> Learnings</a></li>
-          <li><a href="blog.html"><i class="icon-doc-text"></i>Blog</a></li>
-        </ul>
-        <div class="nav-collapse collapse"></div>
-      </div>
-    </div>
-  </div>
-  <div class="container profile">
-    <div class="span3"> 
-      <img src="img/zaibi1.png" alt="Shahzaib's Picture">
-      <br>
-      <a href="https://drive.google.com/file/d/1V_nwk0Sen_2ARujsoYUSJix9SuP465uG/view?usp=drive_link" download class="btn" target="_blank">Download CV</a>
-    </div>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-logo">
+                <a href="profile.html">Shahzaib Hassan</a>
+            </div>
+            <div class="navbar-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar-menu">
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="learnings.html">Learnings</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
     
-    <div class="span5">
-      <h1>Shahzaib Hassan</h1>
-      <h3>Programmer &amp; ML Engineer</h3>
-      <p> Hello I am Shahzaib Hassan ML Engineer from Pakistan. If you have something to be done just call my name and I
-        will be there. :-) </p>
-      <section id="skills" class="skills">
-        <div class="container">
-          <h2>Skills</h2>
-          <div class="row">
-            <!-- Add your skills here -->
-            <div class="col-md-4">
-              <div class="skill-card">
-                <h3>Machine Learning</h3>
-                <p>Expertise in various ML algorithms and frameworks.</p>
-              </div>
+    
+    <section class="profile">
+        <div class="profile-header">
+            <div class="profile-picture">
+                <img src="profilepic.png" alt="Your Profile Picture">
             </div>
-            <div class="col-md-4">
-              <div class="skill-card">
-                <h3>Python</h3>
-                <p>Proficient in Python programming for data analysis and ML.</p>
-              </div>
+            <div class="profile-info">
+                <h1>Hello there! 👋</h1>
+                <p class="intro">
+                    I am <strong>Shahzaib Hassan</strong>, a passionate machine learning enthusiast with a strong foundation in data science. 
+                    I thrive on tackling challenging problems and leveraging data to drive actionable insights.
+                </p>
             </div>
-          </div>
-      </section>
-      <h2>Educational Details</h2>
-      <ul>
-        <li>
-          <strong>BS Artificial Intelligence (Ongoing)</strong>
-          <br>
-          <span class="institution">
-            <a href="https:www.iub.edu.pk" target="_blank">Islamia University of Bahawalpur</a>
-          </span>
-          <br>
-          <span class="semester">
-            Semester: 4th
-          </span>
-          <br>
-          <a href="img/transcript.jpg" target="_blank">
-            <span class="gpa">GPA: 3.62</span>
-          </a>
-
-        </li>
-        <!-- Add more educational details as needed -->
-      </ul>
-      <!-- <a href="mailto:shahxeebhassan@gmail.com" class="hire-me"><i class="icon-paper-plane"></i> Hire Me </a> -->
-    </div>
-  </div>
-  <div class="row social">
-    <ul class="social-icons">
-      <li><a href="https://www.facebook.com/shahxeebhassan" target="_blank"><img src="img/fb.png" alt=""></a></li>
-      <li><a href="https://twitter.com/shahxaib_hassan" target="_blank"><img src="img/tw.png" alt=""></a></li>
-      <li><a href="https://www.linkedin.com/in/shahzaib-ai-enthusiast/" target="_blank"><img src="img/linkedin.png"
-            alt=""></a></li>
-      <li><a href="https://github.com/Shahzaib-Hasaan" target="_blank"><img src="img/github.png" alt=""></a></li>
-      <!-- <!-- <li><a href="#"><img src="img/st.png" alt=""></a></li> -->
-      <li><a href="https://wa.me/923027701345" target="_blank"><img src="img/whatsapp.png" alt=""></a></li>
-    </ul>
-  </div>
-  <div class="footer" href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
-    <div class="container">
-      <p class="pull-left">shahxeebhassan@gmail.com</a></p>
-      <p class="pull-right"> +923027701345</p>
-    </div>
-  </div>
-  <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-    aria-hidden="true">
-    <div class="modal-header">
-      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-      <h3 id="myModalLabel"><i class="icon-mail"></i> Contact Me</h3>
-    </div>
-    <div class="modal-body">
-      <form action="#">
-        <input type="text" placeholder="Yopur Name">
-        <input type="text" placeholder="Your Email">
-        <input type="text" placeholder="Website (Optional)">
-        <textarea rows="3" style="width:80%"></textarea>
-        <br>
-        <button type="submit" class="btn btn-large"><i class="icon-paper-plane"></i> SUBMIT</button>
-      </form>
-    </div>
-  </div>
-  <script src="js/jquery-1.10.1.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script>
-    $('#myModal').modal('hidden')
-  </script>
+        </div>
+        
+        
+    </section>
+    
+    <footer>
+        <p>&copy; 2023 Your Name</p>
+        <p>Contact: your@email.com</p>
+    </footer>
+    <script>
+        const navbarToggle = document.querySelector('.navbar-toggle');
+        const navbarMenu = document.querySelector('.navbar-menu');
+    
+        navbarToggle.addEventListener('click', () => {
+            navbarMenu.classList.toggle('active');
+        });
+    </script>    
 </body>
-
 </html>
