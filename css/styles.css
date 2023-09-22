@@ -1,0 +1,418 @@
+/* Basic Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* header portion  */
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 0.5rem 0;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+}
+
+.navbar-logo a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar-toggle {
+    display: none; /* Hide toggle icon by default for larger screens */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+}
+
+.navbar-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-menu li {
+    margin-right: 20px;
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar-menu a:hover {
+    color: #00bcd4; /* Change the color on hover */
+}
+/* Add a style for the active link */
+/* Style for the active link */
+.navbar-menu a.active {
+    font-weight: bold; /* Add a stronger font weight */
+    border-bottom: 2px solid #00bcd4; /* Add an underline style */
+    padding-bottom: 2px; /* Adjust the spacing between text and underline */
+    color: #00bcd4; /* Change text color for the active link */
+    border-radius: 4px; /* Add rounded corners to the underline */
+    transition: border-color 0.3s, color 0.3s; /* Add a smooth transition effect */
+}
+
+/* Remove the hover effect for the active link */
+.navbar-menu a.active:hover {
+    border-color: #00bcd4;
+    color: #00bcd4;
+}
+
+
+
+/* Media Query for Responsive Navbar */
+@media (max-width: 768px) {
+    .navbar-menu {
+        display: none; /* Hide menu for smaller screens by default */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Adjust the top position to avoid covering content */
+        left: 0;
+        background-color: #333;
+        width: 100%;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .navbar-menu.active {
+        display: flex; /* Show menu when active */
+    }
+
+    .navbar-toggle {
+        display: flex; /* Show toggle icon for smaller screens */
+    }
+}
+
+
+/* Limit the maximum width of the entire profile section */
+.profile {
+    max-width: 800px; /* Adjust the value to your preferred maximum width */
+    margin: 0 auto; /* Center the profile section horizontally */
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background-color: #f4f4f4; /* Background color */
+} 
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .profile-header {
+        flex-direction: column; /* Change to a vertical layout on small screens */
+        text-align: center; /* Center-align the content */
+    }
+}
+.profile-picture img {
+    max-width: 250px;
+    border-radius: 400%;
+    border: 4px solid #00bcd4; /* Border color */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+    transition: transform 0.3s ease-in-out; /* Add a hover effect */
+}
+
+.profile-picture img:hover {
+    transform: scale(1.2); /* Enlarge the image on hover */
+}
+
+.profile-info {
+    margin-left: 40px;
+    color: #333; /* Text color */
+}
+
+.profile-info h1 {
+    font-size: 32px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+}
+
+.profile-info h1::after {
+    content: " 👋";
+    font-size: 28px;
+    margin-left: 10px; /* Adjust spacing between text and emoji */
+}
+
+.profile-info .intro {
+    font-size: 20px;
+    margin-top: 20px; /* Increased spacing between intro and name */
+    line-height: 1.4; /* Improved line height for better readability */
+}
+
+.profile-info strong {
+    font-weight: bold;
+    color: #00bcd4; /* Highlight the name with a different color */
+}
+
+/* Add a hover effect for the name */
+.profile-info strong:hover {
+    text-decoration: underline;
+}
+/* Hover effect for the introduction */
+.profile-info .intro:hover {
+    background-color: #f0f0f0; /* Change background color on hover */
+    transition: background-color 0.3s ease;
+}
+
+
+
+/* Education section */
+
+/* Education and Skills Section Styles */
+.education-and-skills-container {
+    background-color: #f4f4f4; /* Background color for the container */
+    padding: 20px; /* Add padding to the container for spacing */
+    border-radius: 8px; /* Add rounded corners */
+}
+
+.education-and-skills {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* Styles for Education Section */
+.education {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.education h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.education-item {
+    margin-bottom: 20px;
+}
+
+.education-item h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.education-item p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.education-item a {
+    text-decoration: none;
+    color: #00bcd4;
+    font-weight: bold;
+}
+
+.education-item a:hover {
+    text-decoration: underline;
+}
+
+/* Styles for Skills Section */
+.skills {
+    background-color: #f4f4f4;
+    padding: 20px 60px 20px 0px;
+    border-radius: 8px;
+}
+
+.skills h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.skill-list {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.skill-list li {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #555;
+}
+
+/* Media query for responsive layout */
+@media (max-width: 768px) {
+    .education-and-skills {
+        flex-direction: column; /* Stack sections vertically on small screens */
+        align-items: center; /* Center-align items vertically in the column layout */
+    }
+    .skills{
+        padding: 20px 130px 20px 0px;
+    }
+}
+
+/* Achievements section */
+/* Achievements Section Styles */
+.achievements {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px; /* Add some top margin for spacing */
+}
+
+.achievements h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.achievement-list {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.achievement-list li {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #555;
+}
+
+/* Styles for the certificate link */
+.achievement-list a {
+    text-decoration: none;
+    color: #00bcd4;
+    font-weight: bold;
+    margin-left: 10px; /* Add spacing between achievement and link */
+}
+
+.achievement-list a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Information Section Styles */
+.contact {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.contact h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.contact p {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #555;
+}
+
+/* Social Media Links Styles */
+.social-media-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Add spacing between social links */
+    padding: 10px;
+}
+
+.social-link {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.social-link img {
+    width: 30px; /* Set the width of the social media icons */
+    margin-right: 10px; /* Add spacing between the icon and text */
+}
+
+.social-link:hover {
+    color: #00bcd4; /* Change the color on hover */
+}
+/* Email Link Styles */
+.contact-email {
+    text-decoration: none; /* Remove underline */
+    color: #00bcd4; /* Set the link color */
+    font-weight: bold; /* Make the email address bold */
+}
+
+.contact-email:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.footer-email {
+    text-decoration: none; /* Remove underline */
+    color: #00bcd4; /* Set the link color */
+    font-weight: bold; /* Make the email address bold */
+}
+
+.footer-email:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+/* Section Nav  */
+
+.profile-nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.profile-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.profile-nav li {
+    display: inline;
+    margin: 0 20px;
+}
+
+.profile-nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.profile-nav a:hover {
+    color: #00bcd4;
+}
+
