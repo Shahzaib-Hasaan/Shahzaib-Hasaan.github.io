@@ -58,6 +58,7 @@ header {
 
 .navbar-menu li {
     margin-right: 20px;
+    margin-bottom: 10px; /* Increase spacing between menu items */
 }
 
 .navbar-menu a {
@@ -162,7 +163,7 @@ header {
 }
 
 .profile-info h1::after {
-    content: " 👋";
+    /* content: " 👋"; */
     font-size: 28px;
     margin-left: 10px; /* Adjust spacing between text and emoji */
 }
