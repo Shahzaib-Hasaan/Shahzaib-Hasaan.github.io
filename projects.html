@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Projects - Machine Learning Portfolio</title>
 </head>
 
@@ -103,33 +104,8 @@
         <p>Contact: <a href="mailto:shahxeebhassan@email.com" class="footer-email">shahxeebhassan@email.com</a></p>
     </footer>
     
-    <script>
-        const navbarToggle = document.querySelector('.navbar-toggle');
-        const navbarMenu = document.querySelector('.navbar-menu');
-
-        navbarToggle.addEventListener('click', () => {
-            navbarMenu.classList.toggle('active');
-        });
-    </script>
-    <script>
-        // Get all accordion items
-        const accordionItems = document.querySelectorAll('.accordion-item');
-    
-        // Add a click event listener to each item
-        accordionItems.forEach(item => {
-            const title = item.querySelector('.accordion-title');
-            const content = item.querySelector('.accordion-content');
-    
-            title.addEventListener('click', () => {
-                // Toggle the content's display when the title is clicked
-                if (content.style.display === 'block') {
-                    content.style.display = 'none';
-                } else {
-                    content.style.display = 'block';
-                }
-            });
-        });
-    </script>
+    <script src="js/script.js"></script>
+    <script src="js/accordian.js"></script>
 </body>
 
 </html>
