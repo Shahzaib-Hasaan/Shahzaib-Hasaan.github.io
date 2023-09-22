@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/blog.css">
     <title>Profile - Machine Learning Portfolio</title>
 </head>
 
@@ -20,16 +21,36 @@
                 <span class="bar"></span>
             </div>
             <ul class="navbar-menu">
-                <li><a href="index.html" class="active">Profile</a></li>
+                <li><a href="index.html">Profile</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="learnings.html">Learnings</a></li>
-                <li><a href="blog.html">Blog</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
             </ul>
         </nav>
     </header>
 
 
+    <section class="blog">
+        <div class="blog-post">
+            <h2>Blog Post Title 1</h2>
+            <p class="blog-meta">Posted on September 30, 2023 by Shahzaib Hassan</p>
+            <img src="blog-image1.jpg" alt="Blog Image">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero eu tortor rhoncus,
+                vel varius erat iaculis. Sed sit amet ligula ut metus tincidunt interdum et in ante.</p>
+            <a href="blog-post1.html" class="read-more">Read More</a>
+        </div>
 
+        <div class="blog-post">
+            <h2>Blog Post Title 2</h2>
+            <p class="blog-meta">Posted on September 25, 2023 by Shahzaib Hassan</p>
+            <img src="blog-image2.jpg" alt="Blog Image">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero eu tortor rhoncus,
+                vel varius erat iaculis. Sed sit amet ligula ut metus tincidunt interdum et in ante.</p>
+            <a href="blog-post2.html" class="read-more">Read More</a>
+        </div>
+
+        <!-- Add more blog posts here -->
+    </section>
 
 
 
@@ -37,14 +58,7 @@
         <p>Contact: <a href="mailto:shahxeebhassan@email.com" class="footer-email">shahxeebhassan@email.com</a></p>
     </footer>
     
-    <script>
-        const navbarToggle = document.querySelector('.navbar-toggle');
-        const navbarMenu = document.querySelector('.navbar-menu');
-
-        navbarToggle.addEventListener('click', () => {
-            navbarMenu.classList.toggle('active');
-        });
-    </script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
