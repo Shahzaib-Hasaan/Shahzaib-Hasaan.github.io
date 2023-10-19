@@ -50,28 +50,18 @@
     </header>
 
     <section class="blog">
-        <div class="blog-post">
-            <h2>Blog Post Title 1</h2>
-            <p class="blog-meta">Posted on September 30, 2023 by Shahzaib Hassan</p>
-            <img src="blog-image1.jpg" alt="Blog Image">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero eu tortor rhoncus,
-                vel varius erat iaculis. Sed sit amet ligula ut metus tincidunt interdum et in ante.</p>
-            <a href="blog-post1.html" class="read-more">Read More</a>
+        <div class="sorting-options">
+            <button id="newToOldButton">New to Old</button>
+            <button id="oldToNewButton">Old to New</button>
         </div>
-
-        <div class="blog-post">
-            <h2>Blog Post Title 2</h2>
-            <p class="blog-meta">Posted on September 25, 2023 by Shahzaib Hassan</p>
-            <img src="blog-image2.jpg" alt="Blog Image">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero eu tortor rhoncus,
-                vel varius erat iaculis. Sed sit amet ligula ut metus tincidunt interdum et in ante.</p>
-            <a href="blog-post2.html" class="read-more">Read More</a>
+        <div class="blog-posts">
+            <!-- Blog posts will be dynamically loaded here using JavaScript -->
         </div>
-
-        <!-- Add more blog posts here -->
+        <div class="pagination">
+            <button id="prevPageButton">Previous</button>
+            <button id="nextPageButton">Next</button>
+        </div>
     </section>
-
-
 
     <footer>
         <p>Contact: <a href="mailto:shahxeebhassan@email.com" class="footer-email">shahxeebhassan@email.com</a></p>
@@ -79,7 +69,8 @@
 
 
     <script src="js/script.js"></script>
-    <script src="js/blog.js"></script>
+    <script src="js/blog_dropdown.js"></script>
+    <script src="js/blogpage.js"></script>
 </body>
 
 </html>
