@@ -30,6 +30,42 @@ display: block;
 }
 .dropdown-content a:hover {background-color: #ddd;}
 .dropdown:hover .dropbtn {background-color: #3e8e41;}  
+@media (max-width: 768px) {
+    .navbar-menu {
+        display: none; /* Hide menu for smaller screens by default */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Adjust the top position to avoid covering content */
+        left: 0;
+        background-color: #333;
+        width: 100%;
+        text-align: center;
+        z-index: 1;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    }
+    
+
+    .navbar-menu.active {
+        display: flex; /* Show menu when active */
+    }
+
+    .navbar-toggle {
+        display: flex; /* Show toggle icon for smaller screens */
+        /*move the right most edge to the right most edge of the screen*/
+        margin-left: auto;
+        
+
+        /* align vertically center */
+        align-items: center;
+
+
+    }
+    .navbar-logo{
+        display: flex;
+        margin-left: 10px;
+    }
+
+}
 
 /* Blog Styling */
 .blog {
