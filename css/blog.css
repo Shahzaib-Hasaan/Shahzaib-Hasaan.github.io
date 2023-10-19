@@ -118,3 +118,33 @@ display: block;
 .read-more:hover {
     color: #007d8a;
 }
+
+/* Style for sorting buttons */
+#newToOldButton, #oldToNewButton {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* Hover effect for the buttons */
+#newToOldButton:hover, #oldToNewButton:hover {
+    background-color: #2980b9;
+}
+
+/* Style for pagination buttons (if needed) */
+#prevPageButton, #nextPageButton {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* Hover effect for the pagination buttons */
+#prevPageButton:hover, #nextPageButton:hover {
+    background-color: #c0392b;
+}

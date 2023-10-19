@@ -1,12 +1,12 @@
 // Sample data for blog posts (you should load this dynamically from a database):
 const blogPosts = [
-    { title: "Blog Post Title 1", date: "2023-09-30", link: "blog-post1.html" },
-    { title: "Blog Post Title 2", date: "2023-09-25", link: "blog-post2.html" },
-    { title: "Blog Post Title 3", date: "2023-09-20", link: "blog-post3.html" },
-    { title: "Blog Post Title 4", date: "2023-09-15", link: "blog-post4.html" },
-    { title: "Blog Post Title 5", date: "2023-09-10", link: "blog-post5.html" },
-    { title: "Blog Post Title 6", date: "2023-09-05", link: "blog-post6.html" },
-    { title: "Blog Post Title 7", date: "2023-09-01", link: "blog-post7.html" },
+    { title: "Weekly Learning Post Title 1", date: "2023-09-30", link: "blog-post1.html" },
+    { title: "Weekly Learning Post Title 2", date: "2023-09-25", link: "blog-post2.html" },
+    { title: "Weekly Learning Post Title 3", date: "2023-09-20", link: "blog-post3.html" },
+    { title: "Weekly Learning Post Title 4", date: "2023-09-15", link: "blog-post4.html" },
+    { title: "Weekly Learning Post Title 5", date: "2023-09-10", link: "blog-post5.html" },
+    { title: "Weekly Learning Post Title 6", date: "2023-09-05", link: "blog-post6.html" },
+    { title: "Weekly Learning Post Title 7", date: "2023-09-01", link: "blog-post7.html" },
     // Add more posts
 ];
 
