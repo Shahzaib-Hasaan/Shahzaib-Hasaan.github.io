@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css"> 
     <link rel="stylesheet" href="css/blog.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <title>Profile - Machine Learning Portfolio</title>
+        <style>
+            /*Show dropdown menu on hover*/
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+        </style>
+    <title>Post 1</title>
 </head>
-
 <body>
     <header>
         <nav class="navbar">
@@ -27,7 +31,7 @@
                 <ul class="navbar-menu">
                     <div class="dropdown">
                         <li class="nav-item dropdown">
-                            <a class="nav-link active dropdown-toggle" id="dropdown-button" href="#" id="navbarDropdownMenuLink"
+                            <a class="nav-link active dropdown-toggle" id="dropdown-button" href="blog.html" id="navbarDropdownMenuLink"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Blog
                             </a>
@@ -46,29 +50,19 @@
         </nav>
 
     </header>
-
-    <section class="blog">
-        <div class="sorting-options">
-            <button id="newToOldButton">New to Old</button>
-            <button id="oldToNewButton">Old to New</button>
-        </div>
-        <div class="blog-posts">
-            <!-- Blog posts will be dynamically loaded here using JavaScript -->
-        </div>
-        <div class="pagination">
-            <button id="prevPageButton">Previous</button>
-            <button id="nextPageButton">Next</button>
-        </div>
+    <section class="blog-post">
+        <h2>Blog Post Title 1</h2>
+        <p class="blog-meta">Posted on September 30, 2023 by Shahzaib Hassan</p>
+        <img src="blog-image1.jpg" alt="Blog Image">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero eu tortor rhoncus, vel varius erat iaculis.
+            Sed sit amet ligula ut metus tincidunt interdum et in ante.
+        </p>
     </section>
-
     <footer>
         <p>Contact: <a href="mailto:shahxeebhassan@email.com" class="footer-email">shahxeebhassan@email.com</a></p>
     </footer>
-
-
     <script src="js/script.js"></script>
-    <script src="js/blog_dropdown.js"></script>
-    <script src="js/blogpage.js"></script>
+    <!-- <script src="js/blog_dropdown.js"></script> -->
 </body>
-
 </html>
