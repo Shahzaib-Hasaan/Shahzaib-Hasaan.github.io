@@ -1,7 +1,6 @@
 // Sample data for blog posts (you should load this statically or dynamically):
 const blogPosts = [
-    { folder: 'ml', title: "Machine Learning Post Title 1", date: "2023-09-30", link: "blog/ml/blog-post3.html" },
-    { folder: 'ml', title: "Machine Learning Post Title 2", date: "2023-09-25", link: "blog/ml/blog-post4.html" },
+    { folder: 'ml', title: "Supervised and Unsupervised Learning", date: "2023-10-20", link: "blog/ml/ml-post1.html" },
     // Add more posts from different folders
 ];
 
@@ -29,7 +28,6 @@ function displayBlogPosts() {
         blogPostElement.innerHTML = `
         <h2>${post.title}</h2>
         <p class="blog-meta">Posted on ${post.date} by Shahzaib Hassan</p>
-        <p>Content of the blog post...</p>
         <a href="${post.link}" class="read-more">Read More</a>
     `;
     
