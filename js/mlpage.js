@@ -1,16 +1,10 @@
-// Sample data for blog posts (you should load this dynamically from a database):
+// Sample data for blog posts (you should load this statically or dynamically):
 const blogPosts = [
-    { title: "Machine Learning Post Title 1", date: "2023-09-30", link: "blog-post1.html" },
-    { title: "Machine Learning Post Title 2", date: "2023-09-25", link: "blog-post2.html" },
-    { title: "Machine Learning Post Title 3", date: "2023-09-20", link: "blog-post3.html" },
-    { title: "Machine Learning Post Title 4", date: "2023-09-15", link: "blog-post4.html" },
-    { title: "Machine Learning Post Title 5", date: "2023-09-10", link: "blog-post5.html" },
-    { title: "Machine Learning Post Title 6", date: "2023-09-05", link: "blog-post6.html" },
-    { title: "Machine Learning Post Title 7", date: "2023-09-01", link: "blog-post7.html" },
-    // Add more posts
+    { folder: 'ml', title: "Machine Learning Post Title 1", date: "2023-09-30", link: "blog/ml/blog-post3.html" },
+    { folder: 'ml', title: "Machine Learning Post Title 2", date: "2023-09-25", link: "blog/ml/blog-post4.html" },
+    // Add more posts from different folders
 ];
 
-// Number of posts to display per page and current page number
 const postsPerPage = 5;
 let currentPage = 1;
 
@@ -42,6 +36,7 @@ function displayBlogPosts() {
         blogPostsContainer.appendChild(blogPostElement);
     });
 }
+
 // Event listener for "New to Old" sorting button
 document.getElementById('newToOldButton').addEventListener('click', () => {
     blogPosts.sort((a, b) => new Date(b.date) - new Date(a.date)); // Sort from new to old
@@ -53,7 +48,6 @@ document.getElementById('oldToNewButton').addEventListener('click', () => {
     blogPosts.sort((a, b) => new Date(a.date) - new Date(b.date)); // Sort from old to new
     displayBlogPosts();
 });
-
 
 // Event listener for "Previous Page" button
 document.getElementById('prevPageButton').addEventListener('click', () => {

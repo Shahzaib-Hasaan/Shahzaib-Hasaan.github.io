@@ -9,34 +9,83 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
 }
-.navbar-logo a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 24px;
-    font-weight: bold;
+/* Dropdown Button */
+.dropbtn {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
 }
-/* Dropdown */
-.dropdown{
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
     position: relative;
     display: inline-block;
 }
+
+/* Dropdown Content (Hidden by Default) */
 .dropdown-content {
-display: none;
-position: absolute;
-background-color: #333;
-min-width: 160px;
-box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-z-index: 1;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 4px;
+    overflow: hidden; /* Hide overflowing content */
+    transform: translateY(8px); /* Add vertical offset */
+    opacity: 0;
+    pointer-events: none; /* Prevent interaction with hidden content */
+    transition: opacity 0.3s, transform 0.3s;
 }
+
 /* Links inside the dropdown */
 .dropdown-content a {
-color: black;
-padding: 12px 16px;
-text-decoration: none;
-display: block;
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
 }
-.dropdown-content a:hover {background-color: #ddd;}
-.dropdown:hover .dropbtn {background-color: #3e8e41;}  
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #3498db;
+    color: white;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    transform: translateY(0); /* Show content with a smooth transition */
+    opacity: 1;
+    pointer-events: auto; /* Enable interaction with visible content */
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #2980b9;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+/* Style the tooltip image */
+img[alt="Tooltip Image"] {
+    position: absolute;
+    left: 0;
+    margin-left: 40px;
+    width: 25px; /* Set the width of the tooltip image */
+    cursor: pointer;
+}
+
+
+
 @media (max-width: 768px) {
     .navbar-menu.active {
         display: flex; /* Show menu when active */

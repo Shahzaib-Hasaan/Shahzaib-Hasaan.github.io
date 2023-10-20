@@ -5,12 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/blog.css">
     <title>Profile - Machine Learning Portfolio</title>
+    <style>
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
 </head>
 
 <body>
     <header>
         <nav class="navbar">
+
             <div class="navbar-logo">
                 <a href="index.html">Shahzaib Hassan</a>
             </div>
@@ -19,12 +26,29 @@
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
-            <ul class="navbar-menu">
-                <li><a href="index.html" class="active">Profile</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="learnings.html">Learnings</a></li>
-                <li><a href="blog.html">Blog</a></li>
-            </ul>
+            <div id="navbarNavDropdown">
+                <ul class="navbar-menu">
+                    <li><a href="index.html" class="active">Profile</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <div class="dropdown">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="dropdown-button" href="blog.html"
+                                id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false" data-tooltip="path-to-tooltip-image.jpg">
+                                Blog
+                            </a>
+                            <div class="dropdown-menu dropdown-content" aria-labelledby="navbarDropdownMenuLink"
+                                id="myDropdown">
+                                <a class="dropdown-item" href="git_github.html">Git/Github</a>
+                                <a class="dropdown-item" href="weekly_learning.html">Weekly Learning</a>
+                                <a class="dropdown-item" href="ml.html">Machine Learning</a>
+                            </div>
+                        </li>
+                    </div>
+                    <li><a href="learnings.html">Learnings</a></li>
+
+                </ul>
+            </div>
         </nav>
         <!-- Section Navigation Bar -->
         <nav class="profile-nav">
@@ -33,6 +57,7 @@
                 <li><a href="#achievements">Achievements</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+        </nav>
     </header>
 
 
@@ -45,8 +70,11 @@
             <div class="profile-info">
                 <h1>Hello there! 👋</h1>
                 <p class="intro">
-                    I am <strong>Shahzaib Hassan</strong>, a passionate artificial intelligence enthusiast with a strong foundation in machine learning.I am learning and exploring new things in the field of AI. <br>
-                    I am a fast learner and a good team player. I am looking for an opportunity to work in a challenging environment to prove my skills and utilize my knowledge & intelligence in the growth of the organization.
+                    I am <strong>Shahzaib Hassan</strong>, a passionate artificial intelligence enthusiast with a strong
+                    foundation in machine learning.I am learning and exploring new things in the field of AI. <br>
+                    I am a fast learner and a good team player. I am looking for an opportunity to work in a challenging
+                    environment to prove my skills and utilize my knowledge & intelligence in the growth of the
+                    organization.
                 </p>
             </div>
         </div>

@@ -5,13 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/blog.css">
     <link rel="stylesheet" href="css/styles.css">
     <title>Projects - Machine Learning Portfolio</title>
+    <style>
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        #myDropdown .dropdown-item {
+            color: black;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #3498db;
+            color: white;
+        }
+    </style>
 </head>
 
 <body>
     <header>
         <nav class="navbar">
+
             <div class="navbar-logo">
                 <a href="index.html">Shahzaib Hassan</a>
             </div>
@@ -20,12 +36,29 @@
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
-            <ul class="navbar-menu">
-                <li><a href="index.html">Profile</a></li>
-                <li><a href="projects.html" class="active">Projects</a></li>
-                <li><a href="learnings.html">Learnings</a></li>
-                <li><a href="blog.html">Blog</a></li>
-            </ul>
+            <div id="navbarNavDropdown">
+                <ul class="navbar-menu">
+                    <li><a href="index.html">Profile</a></li>
+                    <li><a href="projects.html" class="active">Projects</a></li>
+                    <div class="dropdown">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="dropdown-button" href="blog.html"
+                                id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false" data-tooltip="path-to-tooltip-image.jpg">
+                                Blog
+                            </a>
+                            <div class="dropdown-menu dropdown-content" aria-labelledby="navbarDropdownMenuLink"
+                                id="myDropdown">
+                                <a class="dropdown-item" href="git_github.html">Git/Github</a>
+                                <a class="dropdown-item" href="weekly_learning.html">Weekly Learning</a>
+                                <a class="dropdown-item" href="ml.html">Machine Learning</a>
+                            </div>
+                        </li>
+                    </div>
+                    <li><a href="learnings.html">Learnings</a></li>
+
+                </ul>
+            </div>
         </nav>
     </header>
 
@@ -52,7 +85,7 @@
                     <p><a href="project1.html" target="_blank">View Project</a></p>
                 </div>
             </div>
-            
+
             <!-- Second Project -->
 
             <div class="accordion-item">
@@ -103,7 +136,7 @@
     <footer>
         <p>Contact: <a href="mailto:shahxeebhassan@email.com" class="footer-email">shahxeebhassan@email.com</a></p>
     </footer>
-    
+
     <script src="js/script.js"></script>
     <script src="js/accordian.js"></script>
 </body>
