@@ -1,7 +1,7 @@
 // Sample data for blog posts (you should load this statically or dynamically):
 const blogPosts = [
-    { folder: 'github', title: "GitHub Post Title 1", date: "2023-09-10", link: "blog/github/blog-post1.html" },
-    { folder: 'github', title: "GitHub Post Title 2", date: "2023-09-05", link: "blog/github/blog-post2.html" },
+    // { folder: 'github', title: "GitHub Post Title 1", date: "2023-09-10", link: "blog/github/blog-post1.html" },
+    // { folder: 'github', title: "GitHub Post Title 2", date: "2023-09-05", link: "blog/github/blog-post2.html" },
     // Add more posts from different folders
 ];
 

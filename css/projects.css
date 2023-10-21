@@ -94,3 +94,34 @@ body {
     text-decoration: underline;
     color: #0097a7; /* Slightly darker color on hover */
 }
+
+/* Style the project images within the accordion */
+.first .project-image {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.first .project-image img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    /* Add additional styling as needed */
+}
+
+/* Larger images */
+.project-image img:nth-child(1),
+.project-image img:nth-child(2) {
+    max-width: 45%;
+}
+
+.project-image img:nth-child(4),
+.project-image img:nth-child(5) {
+    max-width: 30%;
+}
+
+.project-image img:nth-child(3),
+.project-image img:nth-child(6) {
+    max-width: 25%;
+}
