@@ -108,6 +108,8 @@ img[alt="Tooltip Image"] {
 
 }
 
+/* Over all blog stylings */
+
 
 
 
@@ -129,14 +131,14 @@ img[alt="Tooltip Image"] {
 }
 
 /* Style for sorting buttons */
-#newToOldButton, #oldToNewButton {
+/* #newToOldButton, #oldToNewButton {
     padding: 10px 20px;
     margin: 5px;
     background-color: #3498db;
     color: #fff;
     border: none;
     cursor: pointer;
-}
+} */
 
 /* Hover effect for the buttons */
 #newToOldButton:hover, #oldToNewButton:hover {
@@ -156,4 +158,113 @@ img[alt="Tooltip Image"] {
 /* Hover effect for the pagination buttons */
 #prevPageButton:hover, #nextPageButton:hover {
     background-color: #c0392b;
+}
+
+/* Blog Post Container */
+.blog-posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.blog-posts > div {
+    width: calc(33.33% - 20px); /* Adjust width based on the number of columns you want */
+    margin: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+/* Headings */
+.blog-posts h2 {
+    font-size: 24px;
+    color: #333;
+    margin-top: 0;
+}
+
+/* Meta Information */
+.blog-meta {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+/* Author Link */
+.blog-meta a {
+    text-decoration: none;
+    color: #3498db;
+}
+
+/* Images */
+.blog-posts img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+/* Text */
+.blog-posts p {
+    margin-top: 10px;
+}
+
+/* Read More Link */
+.read-more {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Sorting Buttons */
+.sorting-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.sorting-options button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.sorting-options button:hover {
+    background-color: #2277a9;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.pagination button.disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.pagination button:hover {
+    background-color: #2277a9;
 }
