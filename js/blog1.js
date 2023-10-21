@@ -28,7 +28,6 @@ function displayBlogPosts() {
         blogPostElement.innerHTML = `
         <h2>${post.title}</h2>
         <p class="blog-meta">Posted on ${post.date} by Shahzaib Hassan</p>
-        <p>Content of the blog post...</p>
         <a href="${post.link}" class="read-more">Read More</a>
     `;
     
