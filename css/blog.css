@@ -164,7 +164,7 @@ img[alt="Tooltip Image"] {
 .blog-posts {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content:center;
 }
 
 .blog-posts > div {

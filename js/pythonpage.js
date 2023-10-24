@@ -1,7 +1,6 @@
 // Sample data for blog posts (you should load this statically or dynamically):
 const blogPosts = [
-    { folder: 'ml', title: "Supervised and Unsupervised Learning", date: "2023-10-20", link: "blog/ml/ml-post1.html" },
-    { folder: 'python', title: "How Assignment operator works in Pythin", date: "2023-10-24", link: "blog/python/python1.html" },
+    { folder: 'python', title: "How Assignment operator works in Python", date: "2023-10-24", link: "blog/python/python1.html" },
     // Add more posts from different folders
 ];
 
