@@ -21,3 +21,27 @@
 #name-banner:hover{
     color: rgba(255, 255, 255, 0.5);
   }
+
+.more-cert {
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  /* styles.css */
+
+.more-cert p {
+    font-size: 1.2em;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .more-cert a {
+    text-decoration: none;
+    color: #3366cc;
+    font-weight: bold;
+  }
+  
+  .more-cert a:hover {
+    text-decoration: underline;
+  }
+  
