@@ -623,8 +623,28 @@
 
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIA_zqjFMsJM_sxP9-6Pde5vVCTyJmUHM&callback=initMap"></script>
 <!--   Junaid  -->
-  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script> -->
-  <script src="https://mediafiles.botpress.cloud/b49d2e90-8844-47a3-ac9e-dc650a4d9900/webchat/config.js" defer></script>
+<script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+<script>
+  window.botpressWebChat.init({
+      "composerPlaceholder": "Enter your query",
+      "botConversationDescription": "Bot for Information about IUB",
+      "botId": "b49d2e90-8844-47a3-ac9e-dc650a4d9900",
+      "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+      "messagingUrl": "https://messaging.botpress.cloud",
+      "clientId": "b49d2e90-8844-47a3-ac9e-dc650a4d9900",
+      "webhookId": "8a7c363f-f3e1-42e9-a6dc-7e5738aea94a",
+      "lazySocket": true,
+      "themeName": "prism",
+      "botName": "IUB Help Centre",
+      "avatarUrl": "https://seeklogo.com/images/I/iub-the-islamia-university-of-bahawalpur-logo-742F878738-seeklogo.com.png",
+      "stylesheet": "https://webchat-styler-css.botpress.app/prod/c30235d8-d557-462d-a6bc-e814be8fff64/v34051/style.css",
+      "frontendVersion": "v1",
+      "useSessionStorage": true,
+      "enableConversationDeletion": true,
+      "theme": "prism",
+      "themeColor": "#2563eb"
+  });
+</script>
 <!--   Laiba -->
   <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
 <script src="https://mediafiles.botpress.cloud/4af23551-b7db-4602-99f4-764ef25b46e6/webchat/config.js" defer></script>
