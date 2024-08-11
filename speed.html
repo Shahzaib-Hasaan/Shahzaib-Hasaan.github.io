@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Performance Analyzer</title>
+</head>
+<body>
+    <h1>Website Performance Analyzer</h1>
+    <input type="text" id="url" placeholder="Enter website URL">
+    <select id="platform">
+        <option value="mobile">Mobile</option>
+        <option value="desktop">Desktop</option>
+        <option value="both">Both</option>
+    </select>
+    <button onclick="analyzeWebsite()">Analyze</button>
+    <div id="results"></div>
+
+    <script>
+        async function fetchAnalysis(url, apiKey, strategy) {
+            const apiUrl = `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${url}&key=${apiKey}&strategy=${strategy}&category=performance&category=accessibility&category=best-practices&category=seo`;
+            const response = await fetch(apiUrl);
+            return response.json();
+        }
+
+        function displayResults(data, platform) {
+            const categories = data.lighthouseResult.categories;
+            const performance = (categories.performance.score * 100).toFixed(2);
+            const accessibility = (categories.accessibility.score * 100).toFixed(2);
+            const bestPractices = (categories['best-practices'].score * 100).toFixed(2);
+            const seo = (categories.seo.score * 100).toFixed(2);
+
+            return `
+                <h2>${platform} Results</h2>
+                <p>Performance: ${performance}%</p>
+                <p>Accessibility: ${accessibility}%</p>
+                <p>Best Practices: ${bestPractices}%</p>
+                <p>SEO: ${seo}%</p>
+            `;
+        }
+
+        async function analyzeWebsite() {
+            const url = document.getElementById('url').value;
+            const platform = document.getElementById('platform').value;
+            const apiKey = 'AIzaSyCrzzaD4YBcKK8Az19QrvSctZhQCRfDkak';
+            let results = '';
+
+            try {
+                if (platform === 'both') {
+                    const mobileData = await fetchAnalysis(url, apiKey, 'mobile');
+                    const desktopData = await fetchAnalysis(url, apiKey, 'desktop');
+                    results += displayResults(mobileData, 'Mobile');
+                    results += displayResults(desktopData, 'Desktop');
+                } else {
+                    const data = await fetchAnalysis(url, apiKey, platform);
+                    results = displayResults(data, platform.charAt(0).toUpperCase() + platform.slice(1));
+                }
+                document.getElementById('results').innerHTML = results;
+            } catch (error) {
+                console.error('Error fetching the API:', error);
+                document.getElementById('results').innerHTML = '<p>Error fetching the API. Please try again.</p>';
+            }
+        }
+    </script>
+</body>
+</html>
