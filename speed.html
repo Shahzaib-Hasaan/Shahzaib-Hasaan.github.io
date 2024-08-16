@@ -17,9 +17,6 @@
     <div id="results"></div>
 
     <script>
-        const pagespeedkey = process.env.PAGE_SPEED_INSIGHT_API;
-
-
         async function fetchAnalysis(url, apiKey, strategy) {
             const apiUrl = `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${url}&key=${apiKey}&strategy=${strategy}&category=performance&category=accessibility&category=best-practices&category=seo`;
             const response = await fetch(apiUrl);
@@ -45,17 +42,17 @@
         async function analyzeWebsite() {
             const url = document.getElementById('url').value;
             const platform = document.getElementById('platform').value;
-            const apiKey = pagespeedkey;
+            const pagespeedkey = process.env.PAGE_SPEED_INSIGHT_API;
             let results = '';
 
             try {
                 if (platform === 'both') {
-                    const mobileData = await fetchAnalysis(url, apiKey, 'mobile');
-                    const desktopData = await fetchAnalysis(url, apiKey, 'desktop');
+                    const mobileData = await fetchAnalysis(url, pagespeedkey, 'mobile');
+                    const desktopData = await fetchAnalysis(url, pagespeedkey, 'desktop');
                     results += displayResults(mobileData, 'Mobile');
                     results += displayResults(desktopData, 'Desktop');
                 } else {
-                    const data = await fetchAnalysis(url, apiKey, platform);
+                    const data = await fetchAnalysis(url, pagespeedkey, platform);
                     results = displayResults(data, platform.charAt(0).toUpperCase() + platform.slice(1));
                 }
                 document.getElementById('results').innerHTML = results;
