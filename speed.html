@@ -16,12 +16,13 @@
     <button onclick="analyzeWebsite()">Analyze</button>
     <div id="results"></div>
 
-    <script type="module">
-        import { API_KEY } from './src/config.js';
-
-        async function fetchAnalysis(url, apiKey, strategy) {
-            const apiUrl = `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${url}&key=${apiKey}&strategy=${strategy}&category=performance&category=accessibility&category=best-practices&category=seo`;
-            const response = await fetch(apiUrl);
+    <script>
+        // Fetch analysis data from the Netlify function
+        async function fetchAnalysis(url, strategy) {
+            // URL of the Netlify function
+            const netlifyFunctionUrl = `/.netlify/functions/analyze?url=${url}&strategy=${strategy}`;
+            
+            const response = await fetch(netlifyFunctionUrl);
             return response.json();
         }
 
@@ -41,21 +42,19 @@
             `;
         }
 
-        // Ensure analyzeWebsite is in the global scope
-        window.analyzeWebsite = async function() {
+        async function analyzeWebsite() {
             const url = document.getElementById('url').value;
             const platform = document.getElementById('platform').value;
-            const pagespeedkey = API_KEY;
             let results = '';
 
             try {
                 if (platform === 'both') {
-                    const mobileData = await fetchAnalysis(url, pagespeedkey, 'mobile');
-                    const desktopData = await fetchAnalysis(url, pagespeedkey, 'desktop');
+                    const mobileData = await fetchAnalysis(url, 'mobile');
+                    const desktopData = await fetchAnalysis(url, 'desktop');
                     results += displayResults(mobileData, 'Mobile');
                     results += displayResults(desktopData, 'Desktop');
                 } else {
-                    const data = await fetchAnalysis(url, pagespeedkey, platform);
+                    const data = await fetchAnalysis(url, platform);
                     results = displayResults(data, platform.charAt(0).toUpperCase() + platform.slice(1));
                 }
                 document.getElementById('results').innerHTML = results;
@@ -63,7 +62,7 @@
                 console.error('Error fetching the API:', error);
                 document.getElementById('results').innerHTML = '<p>Error fetching the API. Please try again.</p>';
             }
-        };
+        }
     </script>
 </body>
 </html>
