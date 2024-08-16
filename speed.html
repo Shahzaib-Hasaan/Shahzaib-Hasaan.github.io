@@ -17,6 +17,7 @@
     <div id="results"></div>
 
     <script>
+        import { API_KEY } from './config.js';
         async function fetchAnalysis(url, apiKey, strategy) {
             const apiUrl = `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${url}&key=${apiKey}&strategy=${strategy}&category=performance&category=accessibility&category=best-practices&category=seo`;
             const response = await fetch(apiUrl);
@@ -42,7 +43,7 @@
         async function analyzeWebsite() {
             const url = document.getElementById('url').value;
             const platform = document.getElementById('platform').value;
-            const pagespeedkey = process.env.REACT_APP_PAGE_SPEED_INSIGHT_API;
+            const pagespeedkey = API_KEY;
             let results = '';
 
             try {
