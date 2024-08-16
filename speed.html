@@ -16,8 +16,9 @@
     <button onclick="analyzeWebsite()">Analyze</button>
     <div id="results"></div>
 
-    <script>
+    <script type="module">
         import { API_KEY } from './src/config.js';
+
         async function fetchAnalysis(url, apiKey, strategy) {
             const apiUrl = `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${url}&key=${apiKey}&strategy=${strategy}&category=performance&category=accessibility&category=best-practices&category=seo`;
             const response = await fetch(apiUrl);
@@ -40,7 +41,8 @@
             `;
         }
 
-        async function analyzeWebsite() {
+        // Ensure analyzeWebsite is in the global scope
+        window.analyzeWebsite = async function() {
             const url = document.getElementById('url').value;
             const platform = document.getElementById('platform').value;
             const pagespeedkey = API_KEY;
@@ -61,7 +63,7 @@
                 console.error('Error fetching the API:', error);
                 document.getElementById('results').innerHTML = '<p>Error fetching the API. Please try again.</p>';
             }
-        }
+        };
     </script>
 </body>
 </html>
